@@ -7,6 +7,47 @@
 
 
 # Config repertoire personnel
+#chown /home/??? bpo
+#chmod 771 /home/???
+#mkdir /home/???/public
+
+chown /home/rdu bpo
+chown /home/sfr bpo
+chown /home/ach bpo
+chown /home/jla bpo
+chown /home/san bpo
+chown /home/ndu bpo
+chown /home/ltu bpo
+chown /home/kth bpo
+chown /home/jde bpo
+chown /home/hst bpo
+chown /home/rma bpo
+chown /home/ade bpo
+chmod 771 /home/rdu
+chmod 771 /home/sfr
+chmod 771 /home/ach
+chmod 771 /home/jla
+chmod 771 /home/san
+chmod 771 /home/ndu
+chmod 771 /home/ltu
+chmod 771 /home/kth
+chmod 771 /home/jde
+chmod 771 /home/hst
+chmod 771 /home/rma
+chmod 771 /home/ade
+mkdir /home/rdu/public
+mkdir /home/sfr/public
+mkdir /home/ach/public
+mkdir /home/jla/public
+mkdir /home/san/public
+mkdir /home/ndu/public
+mkdir /home/ltu/public
+mkdir /home/kth/public
+mkdir /home/jde/public
+mkdir /home/hst/public
+mkdir /home/rma/public
+mkdir /home/ade/public
+
 
 
 
