@@ -57,10 +57,10 @@ mkdir Recherche
 mkdir Developpement
 mkdir Ingenierie
 mkdir Admin
-chown bpo:Recherche Recherche
-chown bpo:Developpement Developpement
-chown bpo:Ingenierie Ingenierie
-chown bpo:Admin Admin
+chown bpo:Recherche /home/Recherche
+chown bpo:Developpement /home/Developpement
+chown bpo:Ingenierie /home/Ingenierie
+chown bpo:Admin /home/Admin
 chmod 770 Recherche
 chmod 770 Developpement
 chmod 770 Ingenierie
