@@ -1,5 +1,6 @@
 # Creation user / group
-
+#user add -d -u(id) -G [name]
+#group add -g(id) [name]
 
 
 
