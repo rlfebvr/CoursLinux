@@ -1,6 +1,6 @@
 # Creation user / group
-#user add -d -u(id) -G [name]
-#group add -g(id) [name]
+
+
 
 
 
@@ -12,3 +12,27 @@
 
 
 # Creation repertoire de groupe et config
+mkdir Recherche
+mkdir Developpement
+mkdir Ingenierie
+mkdir Admin
+chown bpo:Recherche Recherche
+chown bpo:Developpement Developpement
+chown bpo:Ingenierie Ingenierie
+chown bpo:Admin Admin
+chmod 770 Recherche
+chmod 770 Developpement
+chmod 770 Ingenierie
+chmod 770 Admin
+ln -s /home/Rdu/Recherche /home/Recherche
+ln -s /home/sfr/Recherche /home/Recherche
+ln -s /home/ach/Recherche /home/Recherche
+ln -s /home/jla/Recherche /home/Recherche
+ln -s /home/san/Recherche /home/Recherche
+ln -s /home/ndu/Developpement /home/Developpement
+ln -s /home/ltu/Developpement /home/Developpement
+ln -s /home/kth/Developpement /home/Developpement
+ln -s /home/jde/Developpement /home/Developpement
+ln -s /home/hst/Ingenierie /home/Ingenierie
+ln -s /home/rma/Ingenierie /home/Ingenierie
+ln -s /home/ade/Ingenierie /home/Ingenierie
