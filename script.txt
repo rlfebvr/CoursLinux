@@ -29,69 +29,69 @@ sudo useradd -m -u 4102 -G Ingenierie ade
 #chmod 771 /home/???
 #mkdir /home/???/public
 
-chown bpo /home/rdu
-chown bpo /home/sfr
-chown bpo /home/ach
-chown bpo /home/jla
-chown bpo /home/san
-chown bpo /home/ndu
-chown bpo /home/ltu
-chown bpo /home/kth
-chown bpo /home/jde
-chown bpo /home/hst
-chown bpo /home/rma
-chown bpo /home/ade
-chmod 771 /home/rdu
-chmod 771 /home/sfr
-chmod 771 /home/ach
-chmod 771 /home/jla
-chmod 771 /home/san
-chmod 771 /home/ndu
-chmod 771 /home/ltu
-chmod 771 /home/kth
-chmod 771 /home/jde
-chmod 771 /home/hst
-chmod 771 /home/rma
-chmod 771 /home/ade
-mkdir /home/rdu/public
-mkdir /home/sfr/public
-mkdir /home/ach/public
-mkdir /home/jla/public
-mkdir /home/san/public
-mkdir /home/ndu/public
-mkdir /home/ltu/public
-mkdir /home/kth/public
-mkdir /home/jde/public
-mkdir /home/hst/public
-mkdir /home/rma/public
-mkdir /home/ade/public
+sudo chown bpo /home/rdu
+sudo chown bpo /home/sfr
+sudo chown bpo /home/ach
+sudo chown bpo /home/jla
+sudo chown bpo /home/san
+sudo chown bpo /home/ndu
+sudo chown bpo /home/ltu
+sudo chown bpo /home/kth
+sudo chown bpo /home/jde
+sudo chown bpo /home/hst
+sudo chown bpo /home/rma
+sudo chown bpo /home/ade
+sudo chmod 771 /home/rdu
+sudo chmod 771 /home/sfr
+sudo chmod 771 /home/ach
+sudo chmod 771 /home/jla
+sudo chmod 771 /home/san
+sudo chmod 771 /home/ndu
+sudo chmod 771 /home/ltu
+sudo  chmod 771 /home/kth
+sudo chmod 771 /home/jde
+sudo chmod 771 /home/hst
+sudo chmod 771 /home/rma
+sudo chmod 771 /home/ade
+sudo mkdir /home/rdu/public
+sudo mkdir /home/sfr/public
+sudo mkdir /home/ach/public
+sudo mkdir /home/jla/public
+sudo mkdir /home/san/public
+sudo mkdir /home/ndu/public
+sudo mkdir /home/ltu/public
+sudo mkdir /home/kth/public
+sudo mkdir /home/jde/public
+sudo mkdir /home/hst/public
+sudo mkdir /home/rma/public
+sudo mkdir /home/ade/public
 
 
 
 
 
 # Creation repertoire de groupe et config
-mkdir Recherche
-mkdir Developpement
-mkdir Ingenierie
-mkdir Admin
-chown bpo:Recherche /home/Recherche
-chown bpo:Developpement /home/Developpement
-chown bpo:Ingenierie /home/Ingenierie
-chown bpo:Admin /home/Admin
-chmod 770 Recherche
-chmod 770 Developpement
-chmod 770 Ingenierie
-chmod 770 Admin
-ln -s /home/Rdu/Recherche /home/Recherche
-ln -s /home/sfr/Recherche /home/Recherche
-ln -s /home/ach/Recherche /home/Recherche
-ln -s /home/jla/Recherche /home/Recherche
-ln -s /home/san/Recherche /home/Recherche
-ln -s /home/ndu/Developpement /home/Developpement
-ln -s /home/ltu/Developpement /home/Developpement
-ln -s /home/kth/Developpement /home/Developpement
-ln -s /home/jde/Developpement /home/Developpement
-ln -s /home/hst/Ingenierie /home/Ingenierie
-ln -s /home/rma/Ingenierie /home/Ingenierie
-ln -s /home/ade/Ingenierie /home/Ingenierie
+sudo mkdir Recherche
+sudo mkdir Developpement
+sudo mkdir Ingenierie
+sudo mkdir Admin
+sudo chown bpo:Recherche /home/Recherche
+sudo chown bpo:Developpement /home/Developpement
+sudo chown bpo:Ingenierie /home/Ingenierie
+sudo chown bpo:Admin /home/Admin
+sudo chmod 770 Recherche
+sudo chmod 770 Developpement
+sudo chmod 770 Ingenierie
+sudo chmod 770 Admin
+sudo ln -s /home/Rdu/Recherche /home/Recherche
+sudo ln -s /home/sfr/Recherche /home/Recherche
+sudo ln -s /home/ach/Recherche /home/Recherche
+sudo ln -s /home/jla/Recherche /home/Recherche
+sudo ln -s /home/san/Recherche /home/Recherche
+sudo ln -s /home/ndu/Developpement /home/Developpement
+sudo ln -s /home/ltu/Developpement /home/Developpement
+sudo ln -s /home/kth/Developpement /home/Developpement
+sudo ln -s /home/jde/Developpement /home/Developpement
+sudo ln -s /home/hst/Ingenierie /home/Ingenierie
+sudo ln -s /home/rma/Ingenierie /home/Ingenierie
+sudo ln -s /home/ade/Ingenierie /home/Ingenierie
