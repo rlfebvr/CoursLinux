@@ -65,6 +65,18 @@ sudo mkdir /home/jde/public
 sudo mkdir /home/hst/public
 sudo mkdir /home/rma/public
 sudo mkdir /home/ade/public
+sudo chown bpo:rdu /home/rdu/public
+sudo chown bpo:sfr /home/sfr/public
+sudo chown bpo:ach /home/ach/public
+sudo chown bpo:jla /home/jla/public
+sudo chown bpo:san /home/san/public
+sudo chown bpo:ndu /home/ndu/public
+sudo chown bpo:ltu /home/ltu/public
+sudo chown bpo:kth /home/kth/public
+sudo chown bpo:jde /home/jde/public
+sudo chown bpo:hst /home/hst/public
+sudo chown bpo:rma /home/rma/public
+sudo chown bpo:ade /home/ade/public
 sudo chmod 775 /home/rdu/public
 sudo chmod 775 /home/sfr/public
 sudo chmod 775 /home/ach/public
