@@ -2,17 +2,17 @@
 #groupadd -f -g(id)
 #useradd -f -d -u -aG
 
-sudo groupadd -f -g 1000 Admin
+sudo groupadd -f -g 1100 Admin
 sudo groupadd -f -g 2000 Recherche
 sudo groupadd -f -g 3000 Developpement
 sudo groupadd -f -g 4000 Ingenierie
-sudo useradd -m -u 1000 bpo
+sudo useradd -m -u 5000 bpo
 sudo useradd -m -u 2000 -G Admin,Recherche rdu
 sudo useradd -m -u 2101 -G Recherche sfr
 sudo useradd -m -u 2102 -G Recherche ach
 sudo useradd -m -u 2103 -G Recherche jla
 sudo useradd -m -u 2104 -G Recherche san
-sudo useradd -m -u 3000 -G Admin,Developpement ndu
+sudo useradd -m -u 3000 -G Admin,Developpement nduchow
 sudo useradd -m -u 3101 -G Developpement ltu
 sudo useradd -m -u 3102 -G Developpement kth
 sudo useradd -m -u 3103 -G Developpement jde
