@@ -29,18 +29,18 @@ sudo useradd -m -u 4102 -G Ingenierie ade
 #chmod 771 /home/???
 #mkdir /home/???/public
 
-sudo chown bpo /home/rdu
-sudo chown bpo /home/sfr
-sudo chown bpo /home/ach
-sudo chown bpo /home/jla
-sudo chown bpo /home/san
-sudo chown bpo /home/ndu
-sudo chown bpo /home/ltu
-sudo chown bpo /home/kth
-sudo chown bpo /home/jde
-sudo chown bpo /home/hst
-sudo chown bpo /home/rma
-sudo chown bpo /home/ade
+sudo chown bpo:rdu /home/rdu
+sudo chown bpo:sfr /home/sfr
+sudo chown bpo:ach /home/ach
+sudo chown bpo:jla /home/jla
+sudo chown bpo:san /home/san
+sudo chown bpo:ndu /home/ndu
+sudo chown bpo:ltu /home/ltu
+sudo chown bpo:kth /home/kth
+sudo chown bpo:jde /home/jde
+sudo chown bpo:hst /home/hst
+sudo chown bpo:rma /home/rma
+sudo chown bpo:ade /home/ade
 sudo chmod 771 /home/rdu
 sudo chmod 771 /home/sfr
 sudo chmod 771 /home/ach
@@ -65,6 +65,19 @@ sudo mkdir /home/jde/public
 sudo mkdir /home/hst/public
 sudo mkdir /home/rma/public
 sudo mkdir /home/ade/public
+sudo chmod 775 /home/rdu/public
+sudo chmod 775 /home/sfr/public
+sudo chmod 775 /home/ach/public
+sudo chmod 775 /home/jla/public
+sudo chmod 775 /home/san/public
+sudo chmod 775 /home/ndu/public
+sudo chmod 775 /home/ltu/public
+sudo chmod 775 /home/kth/public
+sudo chmod 775 /home/jde/public
+sudo chmod 775 /home/hst/public
+sudo chmod 775 /home/rma/public
+sudo chmod 775 /home/ade/public
+
 
 
 
