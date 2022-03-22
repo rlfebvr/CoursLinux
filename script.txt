@@ -108,15 +108,15 @@ sudo chmod 770 Recherche
 sudo chmod 770 Developpement
 sudo chmod 770 Ingenierie
 sudo chmod 770 Admin
-sudo ln -s /home/Rdu/Recherche /home/Recherche
-sudo ln -s /home/sfr/Recherche /home/Recherche
-sudo ln -s /home/ach/Recherche /home/Recherche
-sudo ln -s /home/jla/Recherche /home/Recherche
-sudo ln -s /home/san/Recherche /home/Recherche
-sudo ln -s /home/ndu/Developpement /home/Developpement
-sudo ln -s /home/ltu/Developpement /home/Developpement
-sudo ln -s /home/kth/Developpement /home/Developpement
-sudo ln -s /home/jde/Developpement /home/Developpement
-sudo ln -s /home/hst/Ingenierie /home/Ingenierie
-sudo ln -s /home/rma/Ingenierie /home/Ingenierie
-sudo ln -s /home/ade/Ingenierie /home/Ingenierie
+sudo ln -s /home/Recherche /home/Rdu/Recherche
+sudo ln -s /home/Recherche /home/sfr/Recherche
+sudo ln -s /home/Recherche /home/ach/Recherche
+sudo ln -s /home/Recherche /home/jla/Recherche
+sudo ln -s /home/Recherche /home/san/Recherche
+sudo ln -s /home/Developpement /home/ndu/Developpement
+sudo ln -s /home/Developpement /home/ltu/Developpement
+sudo ln -s /home/Developpement /home/kth/Developpement
+sudo ln -s /home/Developpement /home/jde/Developpement
+sudo ln -s /home/Ingenierie /home/hst/Ingenierie
+sudo ln -s /home/Ingenierie /home/rma/Ingenierie
+sudo ln -s /home/Ingenierie /home/ade/Ingenierie
