@@ -2,23 +2,23 @@
 #groupadd -f -g(id)
 #useradd -f -d -u -aG
 
-groupadd -f -g 1000 Admin
-groupadd -f -g 2000 Recherche
-groupadd -f -g 3000 Développement
-groupadd -f -g 4000 Ingenierie
-useradd -f -d -u 1000 bpo
-useradd -f -d -u 2000 -aG 1000 -aG 2000 rdu
-useradd -f -d -u 2101 -aG 2000 sfr
-useradd -f -d -u 2102 -aG 2000 ach
-useradd -f -d -u 2103 -aG 2000 jla
-useradd -f -d -u 2104 -aG 2000 san
-useradd -f -d -u 3000 -aG 1000 -aG 3000 ndu
-useradd -f -d -u 3101 -aG 3000 ltu
-useradd -f -d -u 3102 -aG 3000 kth
-useradd -f -d -u 3103 -aG 3000 jde
-useradd -f -d -u 4000 -aG 1000 -aG 4000 hst
-useradd -f -d -u 4101 -aG 4000 rma
-useradd -f -d -u 4102 -aG 4000 ade
+sudo groupadd -f -g 1000 Admin
+sudo groupadd -f -g 2000 Recherche
+sudo groupadd -f -g 3000 Développement
+sudo groupadd -f -g 4000 Ingenierie
+sudo useradd -f -d -u 1000 bpo
+sudo useradd -f -d -u 2000 -aG 1000 -aG 2000 rdu
+sudo useradd -f -d -u 2101 -aG 2000 sfr
+sudo useradd -f -d -u 2102 -aG 2000 ach
+sudo useradd -f -d -u 2103 -aG 2000 jla
+sudo useradd -f -d -u 2104 -aG 2000 san
+sudo useradd -f -d -u 3000 -aG 1000 -aG 3000 ndu
+sudo useradd -f -d -u 3101 -aG 3000 ltu
+sudo useradd -f -d -u 3102 -aG 3000 kth
+sudo useradd -f -d -u 3103 -aG 3000 jde
+sudo useradd -f -d -u 4000 -aG 1000 -aG 4000 hst
+sudo useradd -f -d -u 4101 -aG 4000 rma
+sudo useradd -f -d -u 4102 -aG 4000 ade
 
 
 
