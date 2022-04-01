@@ -1,0 +1,338 @@
+\documentclass[11pt,a4peper]{article}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Linux Résumé}
+
+\section{\textbf{Résumé Cours de linux}}
+
+Linux est un système d’exploitation opensource avec de nombreuse distribution.
+
+\section{\textbf{Commandes}}
+
+Les commandes sont formés de la commande initial suivis d’attribut, il existe 2 types d’attributs :\\
+- Attribut de type Linux avec un tiret avant l’attribut\\
+- Attribut de type unix avec deux tiret avant l’attribut\\
+Pour connaître le fonctionnement des commandes et leurs attributs il y a 2 methodes :\\
+- " man commande " pour afficher le manuel de la commande\\
+- " commande --help pour afficher une aide de la commande\\
+
+Dans le cas ou on ne connaît pas le nom de la commande qu’on doit utiliser on peut utiliser le man pour nous aider avec l’attribut -k pour rechercher un mot clé.\\
+Exemple : man -k user      pour trouver les commandes relatifs au user\\
+\\
+- whoaim : " Qui suis-je " donne le nom de l’utilisateur\\
+- hostname : donne le nom de la machine\\
+- date : donne la date actuelle\\
+- uname: donne des informations sur le système actuel\\
+- passwd : pour changer son mot de passe ou le mot de passe d’un autre utilisateur en rajoutant le     nom de celui-ci après passwd\\
+- touch: crée un fichier ou permet la modification de la date d’accès et de modification du fichier\\
+- last : liste des utilisateurs qui se sont connecté \\
+- history : affiche les commandes utilisées\\
+- ls : liste les fichiers et dossiers du répertoire actuel ( -l pour lister, -a pour tout afficher)\\
+- hier : description de la hiérarchie du système de fichiers\\
+- cp : copier un fichier vers répertoire attribut -r  pour un dossier (cp [SOURCE] [DESTINATION])\\
+- cd : permet de se déplacer dans l’arborescence de fichier\\
+- mkdir : création d’un dossiers\\
+- rmdir : supprime un dossier vide ( rm -rf  pour supprimer un dossier et son contenu)\\
+- rm : supprime un fichier\\
+- mv : déplace un fichier, peut-être utiliser pour le renommer dans le déplaçant dans le même dossier\\
+- find : permet de trouver des fichiers \\
+
+Il existe 3 canaux principaux dans Linux :\\
+- STDIN : c’est l’entrée standard (généralement le clavier)\\
+- STDOUT : c’est la sortie standard (généralement l’écran)\\
+- STDERR : c’est le canal d’erreur (généralement vers un fichier)\\
+
+\includegraphics[scale=0.65]{C:/Users/calin/Documents/Latex/Photo 1.png}\\
+
+On pourrait utiliser " > " a la suite d’une commande pour envoyer le résultat dans un ficher\\
+Exemple : history > history.txt\\
+
+En Linux le pipe permet de rediriger la sortie d’une commandes dans l’entrée d’une seconde afin que la deuxième commande effectue un traitement sur le résultat de la première \\
+Exemple : on veut utiliser ls mais ne voir que les fichiers .jpeg   "  ls -la | grep .jpeg "\\
+
+\section{L’arborescence du système de fichier}
+
+\includegraphics[scale=0.7]{C:/Users/calin/Documents/Latex/Photo 2.png} \\
+Cette structure peut sensiblement varier en fonction des distributions , mais un tronc commun est communément admis c’est le " FHS : file hierarchy standard \\
+
+Chaque arborescence de fichier en Linux prend toujours naissance avec le " root directory " ou " / " \\
+
+Depuis le " / " l’arborescence se dessine autour de dossiers fondamentaux pour le fonctionnement du système \\
+
+Ce système de fichier peut être héberger sur un seul device de stockage\\
+- HDD\\
+- SSD\\
+- Etc\\
+Cependant, il est courant et conseillé d’isoler certains dossiers sur des devices différents afin de repartir la charge de travail de ceux-ci, par exemple /home qui sera très utilisé pourrait être mis sur un HDD réservé a /home. La commande mount permet cette manipulation\\
+
+\includegraphics[scale=0.5]{C:/Users/calin/Documents/Latex/Photo 3.png} 
+
+\section{Les wildcarts}
+
+Le SHELL est capable d’interpréter des symboles de remplacements dans les commandes.\\
+
+* : remplace plusieurs caractère inconnus. \\
+
+? : remplace un caractère inconnu. \\
+
+[0-9] : remplace un caractère par un des caractères du range défini dans cette exemple entre 0 et 9\\
+
+\section{Chemin absolu et relatif}
+
+Un chemin absolu est un chemin qui commence à la racine du système de fichier, commençant par\\
+" / "\\
+Un chemin relatif est un chemin qui commence à la position actuelle dans le système de fichier. \\
+
+\section{Hard-Link et le Symbolic-Link}
+
+Le Hard-Link : est un nom qui référence un " inode " qui lui même référence un bloc sur le périphérique de stockage. \\
+
+Le symbolic-Link : est un nom qui référence un Hard-link, équivalent d’un raccourcis sur windows\\
+
+\includegraphics[scale=0.52]{C:/Users/calin/Documents/Latex/Photo 4.png} 
+
+ln [SOURCE] [LINK-NAME] : permet de créer un HARD-LINK \\
+
+ln -s [SOURCE] [LINK-NAME] : permet de créer un Symbolic-Link \\
+
+\section{\textbf{Travail des fichiers textes}}
+
+\section{VIM}
+
+La commande " VIM " : Edition d’un fichier texte.\\
+Vim (lien du fichier) / ex : vim /home/admin/documents/texte\\
+Mode commande (ESC) : sauvegarder, quitter, rechercher …\\
+Mode insert (i) : éditer le texte\\
+Mode visual(v) : Selection dans le texte\\
+
+Plusieurs options en mode " VIM " :\\
+
+-En mode VISUAL :\\
+D (delete la sélection)\\
+Y (copie la sélection)\\
+P (colle la sélection)\\
+
+-En mode INSERT :\\
+Utilisation comme un éditeur de texte sans l’option copier – coller.\\
+
+
+-En mode COMMANDE : !!! vous pouvez les enchainer !!!\\
+-w (sauvegarde votre fichier)\\
+-q (quitte le fichier)\\
+-! ( force l’action)\\
+-wq ! (sauvegarde et quitte en forçant l’action)\\
+-u (undo)\\
+-Ctrl-r (redo)\\
+-300 (mène à la ligne 300)\\
+-/test (recherche le mot test)\\
+
+\section{LESS}
+
+La commande " less " : organise le texte d’une page pour le " SHELL "\\
+less source / ex : less /var/log/dnf.log\\
+-La navigation ,de page en page, se fait avec page-up et page-down\\
+-Recherche avec :/[mot recherché]\\
+-" Q " pour quitter\\
+
+\section{CAT et TAC}
+
+cat [source] (présente le fichier) ex : cat /home/admin/documents/catfile\\
+tac [source] (présente le fichier en commençant par la fin \\
+ Ex : tac /home/admin/documents/catfile
+ 
+ \section{HEAD et TAIL}
+ 
+head -n[nbres de lignes] [sources] (présente les premières lignes du fichier.\\
+Ex : head -n5 /home/admin/documents/catfile (présente les 5 premières lignes du fichier)\\
+tail -n[nbres de lignes] [sources] (présente les dernières lignes du fichier.\\
+Ex : tail -n5 /home/admin/documents/catfile (présente les 5 dernières lignes du fichier)\\
+PS : un -f affiche les 10dernières lignes et les actualises à chaque changement.\\
+
+\section{GREP}
+
+grep permet de trouver une expression dans un texte contenu dans un fichier.\\
+Avec un pipe " | " on peut préciser la recherche dans un dossier particulier. [cat source | grep expression]\\
+Exemple : cat /home/admin/documents/catfile | grep ‘one’  (recherche du mot one)
+
+\section{AWK , SORT et TR}
+
+"awk est une commande qui permet de découper un texte en fonction de ses délimiteurs."\\
+awk -F [délimiteur] ‘{print (dolars)[numéro colonne]}’ [source]\\
+Ex : awk -F : ‘{print (dolars)1}’ home/admin/documents/catfile\\
+sort trie le texte par ordre alphabétique ou numérique.\\
+ sort [source] (si on veut par ordre numérique (-n))\\
+Ex : sort (-n) home/admin/documents/catfile\\
+tr permet de réaliser une traduction de certains caractères du texte en d’autres \\
+tr [caractère initial] [caractère par lequel il doit changer]\\
+Ex : echo ‘ping pong’ |tr [p] [t] - résultat ‘ting tong’\\
+
+\section{Se connecter à un serveur}
+\section{Root et local user}
+
+-Le root est un super-admin, c’est l’utilisateur le plus puissant de la machine\\
+Les ‘local user’ sont des utilisateurs tout à fait normaux.\\
+Deux façons de passer root : 	-sudo -i\\
+								-sudo su –\\
+Il est possible de travailler en root mais il est déconseillé !\\
+Utilisation de la commande " su " : elle sert à se connecter au root et à n’importe quelle use. / ex : sudo su – (root) ; sudo su Joseline (user : Joseline)\\
+L’utilisation d’une commande en tant qu’admin se fait en rajoutant sudo avant la commande.\\
+
+\section{Connection a une machine linux à distance}
+
+Ssh [username]@[adresse-ip] (connection sécurisé)\\
+Telnet [username]@[adresse-ip] (connection sécurisé)
+
+\section{La gestion des utilisateurs}
+\section{Création utilisateur}
+
+Afin de créer un user :\\
+Useradd [option disponible avec un -h] [login/nom user]\\
+Ex : useradd -m josseline (création de l’user josseline avec un home directory)\\
+Pour attribuer un groupe à l’user :	-g groupe principal\\
+									-G groupe secondaire\\
+									
+\section{Création de groupes}
+
+Afin de créer un groupe :\\
+Groupadd [option liste -h] [nom du groupe]\\
+Ex : groupadd -g 2500 secrétariat (création du groupe secrétariat avec comme id 2500) 
+
+\section{Modification de user / groupe existant}
+
+Modification user :\\
+Usermod [option] [login/nom utilisateur]\\
+Usermod -aG secretariat josseline (assigné le groupe secretariat a josseline sans écrasé les autres(-a))\\
+Quelque option sympa :	\\
+-" -L " : Lock du compte \\	
+-" -U " : Unlock du compte \\
+-" -e " : Fait expirer le password\\
+-" -u " : Modifie l’UID associé au login \\
+-" -I " : Modifie le nom du login\\
+Supprimé un user /groupe :\\
+Userdel -r [login/username]\\
+Groupdel (-f) [nom du groupe]\\
+Modification d’un groupe : un -h met les listes des options\\
+Groupmod -g [new id group] changé l’id du groupe par exemple\\
+Dossiers défaut utilisateur : etc/default/useradd et etc/login.defs\\
+Useradd se trouve le groupe par default, expiration si défini, squelette du home, spooling mail.\\
+Login.defs se trouve le chemin spool, droit default, validité pswd, création groupe au nom du user et création du home.\\
+Gestion passwords\\
+passwd [option dispo avec -h] [login/username]\\
+chage [options][login/username] Permet la même chose que Passwd avec une meilleure lisibilité.\\
+
+/etc/passwd: contient la liste des utilisateurs et est en accès non restreint.\\
+Il contient 7champs : Login : password : UID : GID : comment : homedir : shell
+/etc/group: contient la définition des groupes et la liste des utilisateurs qui en font partie.\\
+Il contient 4champs : Group: password : GID : users (si des users tierces font partie du groupe)\\
+/etc/shadow: Le fichier shadow accompagne le fichier /etc/passwd et c’est là que sont stockés, entre autres, les passwords cryptés des utilisateurs ainsi que les informations relatives à leur validité.\\
+- Il contient 9 champs : \\
+- Champ 1 : login \\
+- Champ 2 : le password crypté : le (dolars)xx(dolars) indique le type de cryptage.\\
+- Champ 3 : le nombre de jours depuis le 01/01/1970 depuis le dernier changement de password. \\
+- Champ 4 : le nombre de jours avant lesquels le password ne peut pas être changé. \\
+- Champ 5 : le nombre de jours après lesquels le password doit être changé. \\
+- Champ 6 : le nombre de jours avant l’expiration du password durant lesquels le user doit être prévenu. \\
+- Champ 7 : le nombre de jours après l’expiration du password après lesquels le compte user est désactivé. \\
+- Champ 8 : le nombre de jours depuis le 01/01/1970 à partir du moment où le compte user a été désactivé. \\
+- Champ 9 : est le champ réservé. \\
+Le cryptage des password sera le plus souvent en " (dolars)6(dolars) : encryptage SHA-512 ".\\
+
+\section{Système de permisssion}
+\section{Permissions standards}
+
+-chmod [UGO ou OCTAL][PATH]  (rwx / 777)\\
+Ceci permet de gérer les permissions des différent folders, pour la lecture, l'écriture et l'éxecution.
+
+\includegraphics[scale=0.9]{C:/Users/calin/Documents/Latex/Photo 5.png} 
+
+\includegraphics[scale=0.9]{C:/Users/calin/Documents/Latex/Photo 6.png} 
+
+\section{Permissions spéciales}
+
+(UGO) -chmod [Spécial][UGO][PATH]: chmod u+s folder1 \\
+(OCTAL) -chmod [Spécial][OCTAL][PATH]: chmod 1777 folder1
+[Spécial]\\
+u+s / 4: Active le SUID\\
+g+s / 2: Active le SGID\\
++t / 1: Active le STICKY BIT
+
+\includegraphics[scale=0.46]{C:/Users/calin/Documents/Latex/Photo 7.png}
+
+\section{Access list}
+
+-setfacl -Rm [Permissions Modification] [File/FOLDER PATH]
+
+Normal : appliquée sur les files déjà existant.\\
+-setfacl -Rm g:bob:rx /home/admin/Documents/folder1/\\
+Default : appliquée sur les files qui seront nouvellement créé.\\
+-setfacl -Rm d:g:bob:rx /home/admin/Documents/folder1/ \\
+Pour vérifier l'ACL, utiliser "getfacl [File/FOLDER PATH]"
+
+\section{Gestion des Quotas}
+
+Les quotas permettent de limiter l'utilisation de l'espace disque de chaque groupe/utilisateur.
+
+Deux types de limites:
+- Block: Limite sur la taille du dossier\\
+- Inodes: Limite sur le nombre de fichiers (dossiers)\\
+
+Blocage soft: Limite que l'utilisateur/groupe peut dépasser pendant un certain temps.\\
+Blocage hard: Limite que l'utilisateur/groupe ne pourra jamais dépasser.
+
+\section{Configuration réseau "run time"}
+
+Il y a deux types de configuration.
+- La configuration " run time " conçue pour monitorer les paramètres et pour effectuer des tests.
+- La configuration persistante faites pour fournir à votre machine un accès permanent et fiable au réseau.
+
+Pour le mode Run time, nous allons utiliser -ip [OPTIONS][OBJETS]
+Pour voir les interfaces réseau disponibles sur votre système: -ip link
+Pour voir les interfaces réseaux disponibles et leur adresse: -ip address show
+
+\includegraphics[scale=0.5]{C:/Users/calin/Documents/Latex/Photo 8.png} 
+
+"man ip" pour obtenir plus d'informations.
+
+Pour le mode de configuration persistante, nous allons utiliser "nmcli" avec des auto complétion.
+Man nmcli pour plus d'informations.
+
+Pour vérifier la configuration du réseau effectuée, utilisez 
+-ping [IP ADDRESS/HOSTNAME]
+-dig [HOSTNAME]
+
+\section{Le Firewalling sous Linux}
+
+Le processus de firewalling en Linux est géré par Netfilter et est directement intégré au Kernel.\\
+Netfilter travaille par filtre des " process informations " et gère les capacités " input " " output " " forward " dans le kernel.\\
+Afin de manipuler netfilter, il faut passer par la commande -iptables\\
+En iptables, on travail sur les échanges qui on lieu entre:\\
+- INPUT : pour les paquets entrants\\
+- OUTPUT : pour les paquets sortant\\
+- FORWARD : dans le cadre d’un routeur, pour les paquets transférés\\
+-iptables -A [INPUT/OUTPUT/FORWARD] [-i/-o] [INTERFACE] -p [udp/tcp/icmp [--dport/sport [n°]] -j [LOG/ACCEPT/DROP/REJECT]
+
+\includegraphics[scale=0.5]{C:/Users/calin/Documents/Latex/Photo 9.png} 
+
+Les Well-known ports
+
+\includegraphics[scale=0.5]{C:/Users/calin/Documents/Latex/Photo 10.png} 
+
+Il existe aussi le firewall-cmd\\
+firewall-cmd est une surcouche à iptables et permet de manière plus simple gérer les " INPUT " et les " OUTPUT " sur votre système.\\
+Comme pour iptables, il est important de connaître le status des autorisations trafiques sur votre système.\\
+-firewall-cmd --list-all\\
+La configuration de firewall-cmd est basée sur l’autorisation de services.\\
+L’ensemble de ces services sont visibles grâce à la commande suivante :\\
+-firewall-cmd --get-services\\
+
+Pour maintenant accorder l’utilisation d’un service et l’autoriser à communique à travers le firewall\\
+-firewall-cmd --add-service ssh (version runtime)\\
+-firewall-cmd --add-service ssh --permanent (version persistante)\\
+Pour maintenant supprimer l’utilisation d’un service et l’empêcher de communique à travers le " firewall "\\
+-firewall-cmd --remove-service ssh --permanent (version persistante)\\
+Après avoir imposé une nouvelle règle, il est essentiel de reload le service " firewalld "\\
+-firewall-cmd –reloa
+
+\end{document}
